@@ -19,5 +19,7 @@ public class Pagamento {
 	private String nome;
 	private String localizacao;
 	private double valor;
+	
+	
 
 }
