@@ -34,7 +34,7 @@
 						<th>Valor</th>
 						<th>Editar/Deletar</th>
 					</tr>
-					<tr th:each="ob:${list}">
+					<tr th:each="ob:${lista}">
 						<td th:text="${ob.id}"></td>
 						<td th:text="${ob.nome}">Fatura do Cartão</td>
 						<td th:text="${ob.localizacao}">São Paulo</td>
@@ -50,8 +50,7 @@
 				<a th:href="@{/pagamento/adicionar}" class="btn btn-success">Adicionar Pagamento</a>
 				<a th:href="@{/pagamento/}" class="btn btn-success">Página Inicial</a>
 			</div>
-			<div th:if="${message!=null}"
-				class="card-footer bg-white text-success">
+			<div th:if="${message!=null}" class="card-footer bg-white text-success">
 				<span th:text="${message}"></span>
 			</div>
 

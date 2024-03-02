@@ -24,14 +24,13 @@
 					<h3>Adicionar Pagamentos</h3>
 				</div>
 				<div class="card-body">
-					<form th:action="@{/pagamento/salvar}" method="post"
-						id="pagamentoForm">
+					<form th:action="@{/pagamento/adicionar}" method="post" id="pagamentoForm">
 						<div class="row">
 							<div class="col-2">
 								<label for="nome"><b>Nome</b></label>
 							</div>
 							<div class="col-4">
-								<input type="text" nome="nome" id="nome" class="form-control" />
+								<input type="text" name="nome" id="nome" class="form-control" />
 							</div>
 						</div>
 						<div class="row">
@@ -39,7 +38,7 @@
 								<label for="localizacao"><b>Localização</b></label>
 							</div>
 							<div class="col-4">
-								<input type="text" nome="localização" id="localização"
+								<input type="text" name="localização" id="localização"
 									class="form-control" />
 							</div>
 						</div>
@@ -48,21 +47,18 @@
 								<label for="valor"><b>Valor</b></label>
 							</div>
 							<div class="col-4">
-								<input type="text" nome="valor" id="valor" class="form-control" />
+								<input type="text" name="valor" id="valor" class="form-control" />
 							</div>
 						</div>
 						<br />
 
-						<button type="submit" class="btn btn-success">Salvar
-							Pagamento</button>
-						<button th:href="@{/pagamento/listar}" class="btn btn-primary">Listar
-							Pagamentos</button>
+						<button type="submit" class="btn btn-success">Salvar Pagamento</button>
+						<a th:href="@{/pagamento/listar}" class="btn btn-primary">Listar Pagamentos</a>
 
 
 					</form>
 				</div>
-				<div th:if="${message!=null}"
-					class="card-footer bg-white text-success">
+				<div th:if="${message!=null}" class="card-footer bg-white text-success">
 					<span th:text="${message}"></span>
 				</div>
 
